@@ -1,10 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@font-face {
+  font-family: "Sanspstb";
+  src: url(./assets/fonts/SansPosterBold.ttf);
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url(./assets/fonts/Aileron-Regular.otf);
+}
 
 body {
-  background: rgb(210, 230, 68);
+  background: rgb(0, 168, 255);
   background: radial-gradient(
     circle,
-    rgba(210, 230, 68, 1) 12%,
-    rgba(57, 143, 201, 1) 72%
+    rgba(0, 168, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 63%
   );
+  
 }

@@ -9,7 +9,6 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Hero />
-      <SongsList />
     </div>
   );
 }
