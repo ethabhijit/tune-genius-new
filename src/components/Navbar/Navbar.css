@@ -11,11 +11,11 @@
   text-transform: uppercase;
   font-family: "Sanspstb", cursive, sans-serif;
   font-size: 1rem;
-  color: #fff !important;
+  color: #00a8ff !important;
 }
 
 .custom__connect__btn {
-  background-color: #fff;
+  background-color: #ffe400;
   color: #00a8ff;
   font-size: 1rem;
   font-family: "Sanspstb", cursive, sans-serif;
