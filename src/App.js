@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import NFTSection from "./components/NFTSection/NFTSection";
+import Compare from "./components/Compare/Compare";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <NFTSection />
+      <Compare />
     </div>
   );
 }
