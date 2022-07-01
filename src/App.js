@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import SongsList from "./components/SongsList/SongsList";
+import NFTSection from "./components/NFTSection/NFTSection";
 
 import "./App.css";
 
@@ -9,6 +9,7 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Hero />
+      <NFTSection />
     </div>
   );
 }
