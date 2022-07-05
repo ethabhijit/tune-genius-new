@@ -1,5 +1,11 @@
 .compare__section__container {
-  background-color: #00a8ff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(85, 197, 255, 1) 50%,
+    rgba(0, 168, 255, 1) 100%
+  );
   padding: 10rem 1rem;
 }
 /* ffe400 */
@@ -7,8 +13,8 @@
   text-transform: uppercase;
   font-family: "Sanspstb", cursive, sans-serif;
   color: #fff;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #00a8ff;
+  -webkit-filter: drop-shadow(3px 3px 3px #555);
+  filter: drop-shadow(3px 3px 3px #555);
   letter-spacing: 1px;
   font-size: 1.2rem;
 }

@@ -27,8 +27,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../assets//images/hero-image.png);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 20%;
 }

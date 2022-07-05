@@ -1,5 +1,11 @@
 .nft__section__container {
-  background-color: #ffe400;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(85, 197, 255, 1) 50%,
+    rgba(0, 168, 255, 1) 100%
+  );
   padding: 10rem 1rem;
 }
 
@@ -7,12 +13,11 @@
   text-transform: uppercase;
   font-family: "Sanspstb", cursive, sans-serif;
   color: #fff;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #00a8ff;
+  -webkit-filter: drop-shadow(3px 3px 3px #555);
+  filter: drop-shadow(3px 3px 3px #555);
   letter-spacing: 1px;
   font-size: 1.2rem;
 }
-
 
 .nft__sub__text__container {
   width: 50%;
@@ -22,7 +27,7 @@
 .nft__sub__text {
   margin: 0;
   margin-top: 10px;
-  color: #00a8ff;
+  color: #ffe400;
   text-align: center;
   font-family: "Sanspstb", cursive, sans-serif;
   font-size: 0.8rem;
@@ -42,21 +47,20 @@
   row-gap: 15px;
 }
 
-
 .border__left {
-  border-left: 2px solid #00a8ff;
+  border-left: 2px solid #ffe400;
 }
 
 .border__right {
-  border-right: 2px solid #00a8ff;
+  border-right: 2px solid #ffe400;
 }
 
 .image__grid img {
   width: 100px;
   height: 100px;
   border-radius: 6px;
-  -webkit-filter: drop-shadow(5px 5px 5px #A0AEC0);
-  filter: drop-shadow(5px 5px 5px #A0AEC0);
+  -webkit-filter: drop-shadow(5px 5px 5px #a0aec0);
+  filter: drop-shadow(5px 5px 5px #a0aec0);
   cursor: pointer;
   transition: 0.2s all;
 }
