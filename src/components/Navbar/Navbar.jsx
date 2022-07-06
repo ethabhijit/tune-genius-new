@@ -14,12 +14,12 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <BTNavbar>
+    <BTNavbar className="navbar-expand-lg" collapseOnSelect expand="lg">
       <Container fluid>
-        <BTNavbar.Brand href="#">
+        <BTNavbar.Toggle aria-controls="navbarScroll" />
+        <BTNavbar.Brand href="#" id="logo__container">
           <img src={Logo} alt="Tunegenius" className="logo" />
         </BTNavbar.Brand>
-        <BTNavbar.Toggle aria-controls="navbarScroll" />
         <BTNavbar.Collapse id="navbarScroll">
           <Nav
             className="my-2 my-lg-0 custom__nav"
