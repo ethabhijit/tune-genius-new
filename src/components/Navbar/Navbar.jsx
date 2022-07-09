@@ -7,8 +7,9 @@ import {
   Button,
   FormControl,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-import Logo from "../../assets/images/logo.png"
+import Logo from "../../assets/images/logo.png";
 
 import "./Navbar.css";
 
@@ -18,7 +19,9 @@ const Navbar = () => {
       <Container fluid>
         <BTNavbar.Toggle aria-controls="navbarScroll" />
         <BTNavbar.Brand href="#" id="logo__container">
-          <img src={Logo} alt="Tunegenius" className="logo" />
+          <Link to="/" className="remove__link__style">
+            <img src={Logo} alt="Tunegenius" className="logo" />
+          </Link>
         </BTNavbar.Brand>
         <BTNavbar.Collapse id="navbarScroll">
           <Nav
@@ -26,12 +29,21 @@ const Navbar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Info</Nav.Link>
-            <Nav.Link href="#action2">Support</Nav.Link>
-            
+            <Nav.Link href="#action1">
+              <Link to="/profile" className="remove__link__style">
+                Profile
+              </Link>
+            </Nav.Link>
+            <Nav.Link href="#action2">
+              <Link to="/" className="remove__link__style">
+                Support
+              </Link>
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <button type="button" className="custom__connect__btn">Connect Wallet</button>
+            <button type="button" className="custom__connect__btn">
+              Connect Wallet
+            </button>
           </Form>
         </BTNavbar.Collapse>
       </Container>

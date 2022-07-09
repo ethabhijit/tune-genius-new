@@ -1,19 +1,21 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import NFTSection from "./components/NFTSection/NFTSection";
-import Compare from "./components/Compare/Compare";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Music from "./pages/Music";
 
 import "./App.css";
 
 const App = () => {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <NFTSection />
-      <Compare />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="music" element={<Music />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,69 @@
+.profile__info__container {
+  background-color: #00a8ff;
+  min-height: 100vh;
+}
+
+.profile__info__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 5rem;
+}
+
+.profile__info__wrapper__col img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.profile__info__wrapper__col h3 {
+  color: #ffe400;
+  font-family: "Sanspstb", cursive, sans-serif;
+  font-size: 3rem;
+  -webkit-text-stroke: 0.7px #000;
+}
+
+.profile__info__wrapper__col h6 {
+  color: #fff;
+  font-family: "Sanspstb", cursive, sans-serif;
+  font-size: 0.9rem;
+}
+
+.profile__info__social__icons__container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .profile__info__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__info__wrapper__col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile__info__wrapper__col h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) { }
