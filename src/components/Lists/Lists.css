@@ -1,0 +1,7 @@
+.list__heading {
+  color: #ffe400;
+  font-family: "Sanspstb", cursive, sans-serif;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.7px #000;
+  text-align: center;
+}

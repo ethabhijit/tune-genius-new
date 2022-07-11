@@ -34,6 +34,11 @@ const Navbar = () => {
                 Profile
               </Link>
             </Nav.Link>
+            <Nav.Link href="#action1">
+              <Link to="/music" className="remove__link__style">
+              Music
+              </Link>
+            </Nav.Link>
             <Nav.Link href="#action2">
               <Link to="/" className="remove__link__style">
                 Support

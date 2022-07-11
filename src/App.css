@@ -12,3 +12,7 @@
   text-decoration: none;
   color: inherit;
 }
+
+.bg__primary {
+  background-color: #00a8ff;
+}

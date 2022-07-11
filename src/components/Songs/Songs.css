@@ -1,0 +1,9 @@
+.songs__page__container {
+  background-color: #00a8ff;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.custom__margin__top {
+  margin-top: 4rem;
+}

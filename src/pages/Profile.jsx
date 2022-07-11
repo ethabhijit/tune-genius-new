@@ -1,3 +1,4 @@
+import Lists from "../components/Lists/Lists";
 import Navbar from "../components/Navbar/Navbar";
 import ProfileInfo from "../components/ProfileInfo/ProfileInfo";
 

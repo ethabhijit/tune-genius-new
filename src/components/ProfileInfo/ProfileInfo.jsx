@@ -5,6 +5,8 @@ import "./ProfileInfo.css";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
 import { FaYoutube, FaTiktok } from "react-icons/fa";
 
+import Lists from "../Lists/Lists";
+
 const ProfileInfo = () => {
   return (
     <div className="profile__info__container">
@@ -25,6 +27,10 @@ const ProfileInfo = () => {
           </div>
           <h6>My wallet: justinrogers.eth</h6>
         </div>
+      </div>
+
+      <div className="margin__sm">
+        <Lists title="Top Songs" />
       </div>
     </div>
   );
