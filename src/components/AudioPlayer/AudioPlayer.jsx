@@ -8,19 +8,32 @@ import {
   FaVolumeMute,
   FaPauseCircle,
 } from "react-icons/fa";
+
 import "./AudioPlayer.css";
+
+import formatTime from "../../utils";
 
 const AudioPlayer = () => {
   const [songProgress, setSongProgress] = useState(0);
   const [volume, setVolume] = useState(50);
+  const [audioFile, setAudioFile] = useState(new Audio("audio/song.mp3"));
   const [mute, setMute] = useState(false);
   const [play, setPlay] = useState(false);
+  const [totalDuration, setTotalDuration] = useState("0:00");
+
+  const [songFormattedCurrentTime, setSongFormattedCurrentTime] =
+    useState("0:00");
 
   const adjustSongProgress = (e) => {
     const ratio =
       e.nativeEvent.offsetX /
       document.getElementById("song__progress").offsetWidth;
     setSongProgress(parseInt(ratio * 100));
+
+    if (audioFile?.currentTime) {
+      audioFile.currentTime = (audioFile.duration * (ratio * 100)) / 100;
+      console.log((audioFile.duration * (ratio * 100)) / 100);
+    }
   };
 
   const adjustSongVolume = (e) => {
@@ -29,6 +42,40 @@ const AudioPlayer = () => {
       document.getElementById("song__volume").offsetWidth;
     setVolume(parseInt(ratio * 100));
   };
+
+  useEffect(() => {
+    if (audioFile?.duration) {
+      setTotalDuration(formatTime(audioFile.duration));
+    }
+  }, [audioFile]);
+
+  useEffect(() => {
+    if (audioFile) {
+      if (play) {
+        setTotalDuration(formatTime(audioFile.duration));
+        audioFile.play();
+      } else {
+        audioFile.pause();
+      }
+    }
+  }, [play, audioFile]);
+
+  useEffect(() => {
+    if (audioFile) {
+      audioFile.volume = volume / 100;
+    }
+  }, [volume, audioFile]);
+
+  useEffect(() => {
+    if (audioFile) {
+      setSongProgress(0);
+
+      audioFile.addEventListener("timeupdate", () => {
+        setSongProgress((audioFile.currentTime / audioFile.duration) * 100);
+        setSongFormattedCurrentTime(formatTime(audioFile.currentTime));
+      });
+    }
+  }, [audioFile]);
 
   return (
     <>
@@ -60,13 +107,23 @@ const AudioPlayer = () => {
                   className="player__control__forward"
                 />
               </div>
-              <div>
-                <ProgressBar
-                  now={songProgress}
-                  className="player__progress__bar"
-                  id="song__progress"
-                  onClick={adjustSongProgress}
-                />
+              <div className="d-flex flex-row align-items-center justify-content-center">
+                <div className="mx-3  d-flex align-items-center">
+                  {songFormattedCurrentTime}
+                </div>
+
+                <div className="d-block w-100">
+                  <ProgressBar
+                    now={songProgress}
+                    className="player__progress__bar"
+                    id="song__progress"
+                    onClick={adjustSongProgress}
+                  />
+                </div>
+
+                <div className="mx-3  d-flex align-items-center">
+                  {totalDuration}
+                </div>
               </div>
             </div>
           </div>
@@ -78,16 +135,16 @@ const AudioPlayer = () => {
                   <FaVolumeMute
                     fontSize={16}
                     onClick={() => {
-                      setMute(!mute);
-                      setVolume(0);
+                      setMute(false);
+                      setVolume(30);
                     }}
                   />
                 ) : (
                   <FaVolumeUp
                     fontSize={16}
                     onClick={() => {
-                      setMute(!mute);
-                      setVolume(50);
+                      setMute(true);
+                      setVolume(0);
                     }}
                   />
                 )}
