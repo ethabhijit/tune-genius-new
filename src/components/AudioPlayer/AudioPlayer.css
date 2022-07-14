@@ -1,0 +1,30 @@
+.player__container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #282828;
+  color: white;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+.player__song__cover {
+  max-width: 80px;
+  max-height: 80px;
+  display: block;
+  margin-right: auto;
+}
+
+.player__progress__bar {
+  height: 5px !important;
+  cursor: pointer;
+}
+
+.player__control__backward {
+  margin-right: 27px;
+}
+
+.player__control__forward {
+  margin-left: 27px;
+}

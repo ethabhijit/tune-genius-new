@@ -1,6 +1,7 @@
 import "./Songs.css";
 
 import Lists from "../Lists/Lists";
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
 
 const Songs = () => {
   return (
@@ -8,7 +9,9 @@ const Songs = () => {
       <div className="custom__margin__top">
         <Lists title="Most Streamed Songs" />
         <Lists title="New Releases" />
+        <div className="p-4 m-5"></div>
       </div>
+      <AudioPlayer />
     </div>
   );
 };
